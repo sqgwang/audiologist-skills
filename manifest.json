@@ -1,0 +1,39 @@
+{
+  "release": "audiologist-skills-v1.0.0",
+  "release_date": "2026-07-13",
+  "manuscript_title": "Development and Component-Level Internal Testing of Audiologist-Guided AI for Audiogram Extraction, Audiological Rule Conformance, and Chinese Reporting",
+  "contents": "Exact locked system-prompt texts used in the formal study evaluations.",
+  "excluded": [
+    "patient records",
+    "clinical images",
+    "case-level inputs",
+    "model outputs",
+    "hidden scoring references",
+    "local filesystem paths",
+    "API credentials"
+  ],
+  "prompts": [
+    {
+      "id": "image_recognition_v10_locked",
+      "title": "Audiogram and tympanometry image-recognition skill",
+      "file": "prompts/audiogram_tympanometry_image_recognition_v10_locked.txt",
+      "prompt_version": "pta_tymp_recognition_only_v10_locked_boundary_abg_reflex500_skill",
+      "evaluation_role": "Locked image-recognition skill used once per case in the 105-case internally held-out Stage 1 evaluation.",
+      "formal_case_count": 105,
+      "character_count_excluding_final_newline": 5772,
+      "utf8_byte_count_excluding_final_newline": 5780,
+      "sha256_excluding_final_newline": "c540e358473be62bdb8de82f6b8fbeccc0251ee5690cb3b3fd71e72023008ba6"
+    },
+    {
+      "id": "structured_reasoning_reporting_v11",
+      "title": "Structured audiological reasoning and Chinese reporting skill",
+      "file": "prompts/structured_audiology_reasoning_and_chinese_reporting_v11.txt",
+      "prompt_version": "raw_pta_tymp_reasoning_v11_full_frequency_history_integrated",
+      "evaluation_role": "Final structured-input calculation, professional-report, and patient-report skill used in the 95-case Stage 3 evaluation.",
+      "formal_case_count": 95,
+      "character_count_excluding_final_newline": 7656,
+      "utf8_byte_count_excluding_final_newline": 13674,
+      "sha256_excluding_final_newline": "a7840787ea7111d6a76c464ac387fa385c168e3a05653bea3ce4389cf3ed1df3"
+    }
+  ]
+}
